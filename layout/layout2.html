@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃2 - html5</title>
+
+    <style>
+       #wrap { width: 960px; height: 800px; margin: 0 auto; color:#fff; text-align: center; font-size: 30px;}
+        header { width: 960px; height: 100px; line-height: 100px; background-color: #111; } /*모든 해상도에 적합한 사이즈가 960px이다 알아두자. */
+        nav {  width: 960px;  height: 100px; line-height: 100px; background-color: #222; }
+        article {  width: 360px;  height: 500px; line-height: 500px; background-color: #333; float: left;}
+        section {  width: 600px;  height: 500px; line-height: 500px; background-color: #444; float:left;}
+        footer {  width: 960px;  height: 100px; line-height: 100px; background-color: #555; clear:both;}
+    </style>
+</head>
+
+<body>
+    
+    <div id="wrap">
+        <!-- html4와 5의 다른점은 4에서는 아이디를 설정하여 진행했지만 5에서는 header라는 태그 footer등 이렇게 태그가 존재-->
+        <!-- 그래서 이를 시멘틱 태그라고 부르기도 한다.-->
+        <header>header </header>
+        <nav>nav </nav>
+        <article>article </article> 
+        <section>section </section>
+        <footer> footer </footer>
+    </div>
+
+</body>
+</html>
