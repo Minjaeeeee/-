@@ -2,41 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃3</title>
-
+    <title>layout3</title>
+    
     <style>
         * {padding: 0; margin: 0;}
-
-        /* 실제로 웹사이트 할때는 *를 사용하지 않는다 불러들이는게 굉장히 오래걸린다. */
-        /* 높이는 반응형이 되지 않는다. */
-        /* 반응형은 스크롤바가 안생기는 것이 중요하다 */
-        #wrap { width: 960px; margin: 0 auto;}
-        #box1 { width: 100%; height: 400px; background-color: #333; }
-        #box2 { width: 50%; height: 400px; background-color: #555; float: left;}
-        #box3 { width: 50%; height: 400px; background-color: #666; float: left;}
-
-        @media (max-width: 960px) {
-            #wrap { width:90%; } 
+        body{background: #f3e5f5;}
+        #wrap {width: 1200px; margin: 0 auto;}
+        header {width: 100%; height: 150px; background-color: #9575cd;} /* 1200px로 된것!*/
+        aside { width: 30%; height: 700px; background-color: #7e57c2; float: left;}
+        section {width: 70%; height: 700px;background-color: #673ab7; float: left;}
+        footer {clear: both; width: 100%; height: 150px;background-color: #5e35b1;}
+        
+        
+        
+        
+        @media (max-width:1220px){
+            #wrap {width: 95%;}
         }
-        @media (max-width: 768px) {
-            #wrap { width:100%; } 
+        
+       
+        @media (max-width:768px){
+            #wrap {width: 100%;}
         }
-        @media (max-width: 480px) {
-            #box2 {float: none; width: 100%;}
-            #box3 {float: none; width: 100%;} 
+        
+        @media (max-width:480px){
+            #wrap {width: 100%;}
+            header {height: 300px;}
+            aside {float: none; width: 100%; height: 300px;}
+            section {float: none; width: 100%; height: 300px;}
         }
-
-
     </style>
 </head>
 
 <body>
-    <div id ="wrap">
-        <div id="box1"></div>
-        <div id="box2"></div>
-        <div id="box3"></div>
-    </div>    
+    <div id="wrap">
+        <header></header>
+        <aside></aside>
+        <section></section>
+        <footer></footer>
+    </div>
 </body>
 </html>
