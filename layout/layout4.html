@@ -2,45 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>layout4</title>
+    
     <style>
-        *{padding: 0; margin: 0;}
-        #wrap { width: 960px; margin: 0 auto;}
-        #box1 { width: 30%; height: 700px; background-color: #333; float: left; }
-        #box2 { width: 40%; height: 700px; background-color: #444; float: left;}
-        #box3 { width: 30%; height: 700px;background-color: #555; float: left;}
-
-        /* 노트북 */
-        @media (max-width: 960px){
-            #wrap {width: 90%;}
+        *{margin: 0; padding: 0;}
+        #wrap { width: 100%;}
+        header { width: 100%; height: 150px; background-color: #81c784;}
+        aside { width: 30%; height: 700px; background-color: #66bb6a; float: left;}
+        section {width: 40%; height: 700px; background-color: #4caf50; float: left;}
+        article{width: 30%; height: 700px; background-color: #43a047; float:left;}
+        footer {clear: both; width: 100%; height: 150px; background-color: #388e3c;}
+        
+         
+        @media (max-width:1220px){
+            aside{width:40%;}
+            section {width:60%;}
+            article {float: none; width: 100%; height: 300px; clear: both;}
         }
         
-
-        /* 태블릿 */
-        @media (max-width: 768px){
-            #wrap {width: 100%;}
-            #box1 {float: none; width: 100%;} /* 한줄로 만들어버림! */
-            #box2 {float: none; width: 100%;}
-            #box3 {float:none; width: 100%;}
+       
+        @media (max-width:768px){
+            aside {float:none; width: 100%; height: 300px;}
+            section { float: none; width: 100%; height: 300px;}
+            
         }
-
-        /* 모바일 */
-        @media (max-width: 480px){
-            #box1 {height: 300px;} /* 한줄로 만들어버림! */
-            #box2 {height: 300px;}
-            #box3 {height: 300px;}
+        
+       
+        @media (max-width:480px){
+            #wrap {width: 100%;}
+            header {height: 300px;}
+            aside {float: none; width: 100%; height: 300px;}
+            section {float: none; width: 100%; height: 300px;}
         }
     </style>
-
 </head>
+
 <body>
     <div id="wrap">
-        <div id="box1"></div>
-        <div id="box2"></div>
-        <div id="box3"></div>
-    </div>
+        <header></header>
+        <aside></aside>
+        <section></section>               
+        <article></article> 
+        <footer></footer>    
+    </div>    
 </body>
 </html>
