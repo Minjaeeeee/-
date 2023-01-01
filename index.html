@@ -6,11 +6,12 @@
     <meta name="description" content="반응형 사이트 따라하기">
     <meta name="keywords" content="반응형사이트, 웹퍼블리셔, 웹 접근성, HTML5">
 
-    <title>반응형 사이트 만들기 : 문서 셋팅</title>
+    <title>반응형 사이트 만들기</title>
 
     <!-- CSS 셋팅 작업! -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
 
     <!-- 파비콘: 브라우저 왼쪽화면에 뜨는 것들을 의미한다. 자세한건 직접 구현해보고 한번 살펴보자.-->
     <link rel="shortcut icon" href="icon/favicon.ico">
@@ -22,6 +23,8 @@
     <link rel="icon" href="icon/favicon-64.png" sizes="64x64">
     <link rel="icon" href="icon/favicon-128.png" sizes="128x128">
 
+    <script src="https://kit.fontawesome.com/5e11615c77.js" crossorigin="anonymous"></script>
+
     <!-- 여기아래는 옛날 브라우저는 최신식의 태그들을 인식못해서 웹이 깨지는 현상이 있을 수도 있는데 그것을 방지하고자 적는 소스이다!-->
 
     <!-- HTLM5shiv ie6~8 --> 
@@ -32,6 +35,9 @@
         </script>
     <![endif]-->
 
+    <!-- 웹 폰트 작업 -->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
 
 
    
@@ -39,8 +45,32 @@
 
 
 <body>
-    <header>
-        <h1>반응형 사이트 제작</h1>
+    <!-- 헤더 작업 -->
+    <header id="header">
+        <div class="container">
+            <div class="header">
+                <div class="header_menu">
+                    <a href="#">Blog</a>
+                    <a href="#">Github</a>
+                    <a href="#">Webstandard</a>
+                </div>
+                
+                <div class="header_tit">
+                    <h1>Professional Web Publisher</h1><br>
+                    <a href="http://webstoryboy.co.kr">webstoryboy</a>
+                </div>
+                
+                <div class="header_icon">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-html5"></i><span>HTML5</span></a></li>
+                        <li><a href="#"><i class="fa-brands fa-github"></i><span>Github</span></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a></li>
+                    </ul>
+                </div>
+
+            </div>  
+        </div>
     </header>
 
     <nav>
