@@ -38,7 +38,7 @@
     <!-- 웹 폰트 작업 -->
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 
- 
+
 
    
 </head>
@@ -64,10 +64,16 @@
                     <ul>
                         <li><a href="#"><i class="fa-brands fa-html5"></i><span>HTML5</span></a></li>
                         <li><a href="#"><i class="fa-brands fa-github"></i><span>Github</span></a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a></li>
+                        <li><a href="#" class="facebook" ><i class="fa-brands fa-facebook"></i><span>Facebook</span></a></li>
+                        <li><a href="#" class="twitter"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a></li>
                     </ul>
                 </div>
+
+                <!--
+                    https://developers.facebook.com/tools/debug/  //페이스북 디버깅 사이트
+                    
+
+                -->
 
             </div>  
         </div>
@@ -118,6 +124,23 @@
      <!-- JavaScript Libraries (제이쿼리 설정) -->
      <script src="js/jquery.min_1.12.4.js"></script>
      <script src="js/modernizr-custom.js"></script>
+
+     <!-- 게시물 공유하기(트위터, 페이스북)-->
+     <script>
+        //http://www.facebook.com/sharer.php?u={페이지 제목}&t={페이지링크}
+        //http://twitter.com/intent/tweet?text={페이지 제목}&url={페이지링크}
+        //https://share.naver.com/web/shareView.nhn?url={페이지링크}&title={페이지 제목}
+        //https://plus.google.com/share?url={페이지링크}&t={페이지 제목}
+        $(".facebook").click(function(e){
+            e.preventDefault();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600'); 
+        });
+        $(".twitter").click(function(e){
+            e.preventDefault();
+            window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+        });
+    </script>
+     
      <!-- 사용자 브라우저에 대한 특징을 나타낸다. 사용가능한 기능들이 f12를 통해 알 수 있다! -->
 </body>
 </html>
